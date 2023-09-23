@@ -1,0 +1,58 @@
+[
+    {
+      "id": "1",
+      "nombre": "Guitarra electrica roja",
+      "categoria": "instrumentos",
+      "precio": 9000,
+      "imagen": "/assets/guitarra2.jpg"
+    },
+    {
+      "id": "2",
+      "nombre": "Guitarra electrica blanca",
+      "categoria": "instrumentos",
+      "precio": 7000,
+      "imagen": "/assets/guitarra3.jpg"
+    },
+    {
+      "id": "3",
+      "nombre": "Bajo electrico rojo",
+      "categoria": "instrumentos",
+      "precio": 8000,
+      "imagen": "/assets/bajo3.jpg"
+    },
+    {
+      "id": "4",
+      "nombre": "Bajo electrico blanco y naranja",
+      "categoria": "instrumentos",
+      "precio": 7500,
+      "imagen": "/assets/bajo2.jpg"
+    },
+    {
+      "id": "5",
+      "nombre": "Batería",
+      "categoria": "instrumentos",
+      "precio": 10000,
+      "imagen": "/assets/bateria3.jpg"
+    },
+    {
+      "id": "6",
+      "nombre": "Pedal de distorsión",
+      "categoria": "accesorios",
+      "precio": 4000,
+      "imagen": "/assets/pedal1.jpg"
+    },
+    {
+      "id": "7",
+      "nombre": "Paquete de púas",
+      "categoria": "accesorios",
+      "precio": 500,
+      "imagen": "/assets/puas1.jpg"
+    },
+    {
+      "id": "8",
+      "nombre": "Palillos",
+      "categoria": "accesorios",
+      "precio": 1200,
+      "imagen": "/assets/palillos1.jpg"
+    }
+  ]
