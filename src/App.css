@@ -2,7 +2,11 @@ img {
   height: 25px;
 }
 
-.card div{}
+
+
+.itemCount span {
+  padding: 20px;
+}
 
 .tarjetas img {
   height: 16rem;

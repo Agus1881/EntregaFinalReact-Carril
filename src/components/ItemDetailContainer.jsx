@@ -2,8 +2,8 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 
-import data from "../data/productos.json"
 import { ItemDetail } from './ItemDetail';
+import { getDoc, getFirestore, doc } from 'firebase/firestore';
 
 
 export const ItemDetailContainer = (props) => {
@@ -11,23 +11,21 @@ export const ItemDetailContainer = (props) => {
     const {id} = useParams()
 
     useEffect(() => {
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                const productId = data.find((singleProduct) => singleProduct.id === id)
-                resolve(productId)
-            }, 2000)
-        })
+        const db = getFirestore()
+        const refDoc = doc(db, "productos", id)
 
-        promise.then((data) => setProduct(data))
-    }, [id])
+        getDoc(refDoc).then((snapshot) => {
+            setProduct({id: snapshot.id, ...snapshot.data()})
+        })
+    }, [])
 
     if(!singleProduct) return <div>Cargando...</div>
-
+ 
     return (
         <Container>
             <h1>{props.greeting}</h1>
             <ItemDetail singleProduct={singleProduct}/>
         </Container>
 
-    )
+    ) 
 }   
