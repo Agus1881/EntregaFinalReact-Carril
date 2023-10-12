@@ -5,8 +5,22 @@ export const CartContext = createContext([])
 export const CartProvider = ({children}) => {
     const [items, setItems] = useState([])
 
-    const addItem = (product, count) => setItems(prev => [...prev, {...product, count}])
+    const addItem = (product, count) => {
+        const alreadyExists = items.some(item => item.id === product.id)
 
+        if (!alreadyExists) setItems(prev => [...prev, {...product, count}])
+        else {
+            const actualizarProductos = items.map(item => {
+                if (item.id === product.id)
+                    return {
+                        ...item,
+                        count: item.count + count
+                    }
+                else return item
+            })
+            setItems(actualizarProductos)
+        }
+    }
     const totalWidget = items.reduce((acc, val) => acc + val.count, 0)
 
     const removeItem = (id) => {
