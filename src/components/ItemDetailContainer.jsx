@@ -18,6 +18,7 @@ export const ItemDetailContainer = (props) => {
             setProduct({id: snapshot.id, ...snapshot.data()})
         })
     }, [])
+    
 
     if(!singleProduct) return <div>Cargando...</div>
  

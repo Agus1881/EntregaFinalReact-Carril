@@ -22,6 +22,7 @@ export const ItemListContainer = (props) => {
                     })
                 )
         })
+
     }, [])
 
    /*  useEffect(() => {
@@ -38,8 +39,8 @@ export const ItemListContainer = (props) => {
             }
 
         })
-    }, [id])
- */
+    }, [id]) */
+
     return (
         <Container>
             {props.greeting}

@@ -15,10 +15,9 @@ export const CartProvider = ({children}) => {
     }
 
     const clear = () => setItems([])
- 
-console.log(items)    
+
     return (
-        <CartContext.Provider value={{addItem, removeItem, clear, totalWidget}}>
+        <CartContext.Provider value={{addItem, removeItem, clear, totalWidget, items}}>
             {children}
         </CartContext.Provider>
     )
